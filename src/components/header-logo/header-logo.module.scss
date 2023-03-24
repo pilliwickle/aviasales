@@ -1,0 +1,31 @@
+@import '/src/constants.scss';
+
+.logo-block {
+  max-width: $mobile-width;
+  min-width: $mobile-width;
+  background-color: transparent;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px auto;
+}
+
+.logo {
+  max-width: 60px;
+  min-width: 60px;
+  height: 60px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media (min-width: 1024px) {
+  .logo {
+    max-width: 80px;
+    min-width: 80px;
+    height: 80px;
+  }
+}

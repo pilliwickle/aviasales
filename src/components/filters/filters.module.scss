@@ -1,0 +1,78 @@
+@import '/src/constants.scss';
+
+.filters {
+  background-color: #fff;
+
+  max-width: $mobile-blocks-width;
+  min-width: $mobile-blocks-width;
+  padding: 20px;
+  margin: 0 auto;
+
+  border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-family: inherit;
+
+  &__title {
+    display: block;
+    text-align: center;
+    text-transform: uppercase;
+    color: $text-color;
+    font-weight: 500;
+    width: auto;
+    margin: 0;
+    margin-bottom: 10px;
+  }
+
+  &__filter-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: 30px;
+    line-height: 15px;
+    font-size: 12px;
+  }
+
+  &__filter-item:hover {
+    background-color: $hover-color;
+    cursor: pointer;
+  }
+
+  &__checkbox {
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .filters {
+    max-width: $desktop-filters-width;
+    min-width: $desktop-filters-width;
+    box-sizing: border-box;
+    margin: 0;
+    max-height: 252px;
+
+    justify-content: start;
+
+    font-size: 13px;
+
+    &__title {
+      text-align: start;
+      font-weight: 500;
+    }
+
+    &__filter-item {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 0;
+      height: 40px;
+      line-height: 30px;
+      font-size: inherit;
+    }
+  }
+}

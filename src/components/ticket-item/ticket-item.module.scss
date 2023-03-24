@@ -1,0 +1,67 @@
+@import '/src/constants.scss';
+
+.ticket-item {
+  max-width: $mobile-blocks-width;
+  background-color: #fff;
+  border-radius: 5px;
+
+  padding: 15px;
+
+  &:hover {
+    background-color: $ticket-hover-color;
+    cursor: pointer;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__price {
+    font-weight: 700;
+    color: $base-color;
+    font-size: 20px;
+    margin: 0;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  &__info-item {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__info-item p {
+    display: flex;
+    flex-direction: column;
+
+    & span:first-child {
+      text-transform: uppercase;
+      color: $secondary-color;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  .ticket-item {
+    max-width: $desktop-tickets-width;
+    font-size: 13px;
+
+    &__price {
+      font-size: 24px;
+    }
+
+    &__info {
+      font-size: inherit;
+    }
+
+    &__header {
+      padding: 5px 20px 0px;
+    }
+  }
+}
