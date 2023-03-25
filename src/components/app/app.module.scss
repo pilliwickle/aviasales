@@ -15,34 +15,9 @@
   margin: 0 auto;
 }
 
-.button {
-  max-width: $mobile-blocks-width;
-  min-width: $mobile-blocks-width;
-  outline: none;
-  border: none;
-  background-color: $base-color;
-  color: #fff;
-  height: 50px;
-  padding: 10px;
-  border-radius: 5px;
-  font-family: inherit;
-
-  display: block;
-
-  margin: 10px auto;
-  text-transform: uppercase;
-
-  cursor: pointer;
-}
-
 @media (min-width: 1024px) {
   .app {
     max-width: $desktop-width;
-  }
-
-  .button {
-    max-width: $desktop-tickets-width;
-    min-width: $desktop-tickets-width;
   }
 
   .section {

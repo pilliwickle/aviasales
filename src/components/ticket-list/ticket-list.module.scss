@@ -10,6 +10,26 @@
   gap: 10px;
 }
 
+.button {
+  max-width: $mobile-blocks-width;
+  min-width: $mobile-blocks-width;
+  outline: none;
+  border: none;
+  background-color: $base-color;
+  color: #fff;
+  height: 50px;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: inherit;
+
+  display: block;
+
+  margin: 10px auto;
+  text-transform: uppercase;
+
+  cursor: pointer;
+}
+
 @media (min-width: 1024px) {
   .ticket-list {
     max-width: $desktop-tickets-width;
@@ -17,4 +37,12 @@
     gap: 20px;
     margin: 20px auto;
   }
+  .button {
+    max-width: $desktop-tickets-width;
+    min-width: $desktop-tickets-width;
+  }
+}
+
+.hidden {
+  display: none;
 }

@@ -16,6 +16,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 0;
   }
 
   &__price {
@@ -33,6 +34,8 @@
 
   &__info-item {
     display: flex;
+    max-width: 113px;
+    min-width: 113px;
     justify-content: space-between;
   }
 
@@ -61,7 +64,14 @@
     }
 
     &__header {
-      padding: 5px 20px 0px;
+      padding: 5px 20px 0px 15px;
     }
-  }
+
+    &__info-item p {
+      display: flex;
+      max-width: 160px;
+      min-width: 160px;
+      flex-direction: column;
+}
+}
 }

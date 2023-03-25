@@ -4,7 +4,7 @@ const filterSlice = createSlice({
   name: 'filter',
   initialState: {
     allTrans: false,
-    noneTrans: false,
+    noneTrans: true,
     oneTrans: false,
     twoTrans: false,
     threeTrans: false,

@@ -16,7 +16,6 @@ const App = () => {
         <div>
           <FiltersTabBar />
           <TicketList />
-          <button className={style['button']}>Показать ещё 5 билетов!</button>
         </div>
       </section>
     </main>
