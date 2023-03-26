@@ -47,6 +47,9 @@
       "last 1 safari version"
     ]
   },
+  "engines": {
+    "node": "14.x"
+    },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
     "eslint": "^8.36.0",
@@ -75,4 +78,5 @@
       "git add"
     ]
   }
+  
 }
