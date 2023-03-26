@@ -5,7 +5,7 @@ import HeaderLogo from '../HeaderLogo/HeaderLogo'
 import FiltersTabBar from '../FiltersTabBar/FiltersTab-Bar'
 import Filters from '../Filters/Filters'
 
-import style from './App.module.scss'
+import style from './app.module.scss'
 
 const App = () => {
   return (
