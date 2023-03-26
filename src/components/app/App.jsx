@@ -3,7 +3,7 @@ import React from 'react'
 import TicketList from '../TicketList/TicketList'
 import HeaderLogo from '../HeaderLogo/HeaderLogo'
 import FiltersTabBar from '../FiltersTabBar/FiltersTab-Bar'
-import Filters from '../Filters/Filters'
+import Filters from '../filters/Filters'
 
 import style from './app.module.scss'
 
