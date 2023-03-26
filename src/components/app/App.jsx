@@ -1,11 +1,11 @@
 import React from 'react'
 
-import TicketList from '../ticket-list/ticket-list'
-import HeaderLogo from '../header-logo/header-logo'
-import FiltersTabBar from '../filters-tab-bar/filters-tab-bar'
-import Filters from '../filters/filters'
+import TicketList from '../TicketList/TicketList'
+import HeaderLogo from '../HeaderLogo/HeaderLogo'
+import FiltersTabBar from '../FiltersTabBar/FiltersTab-Bar'
+import Filters from '../Filters/Filters'
 
-import style from './app.module.scss'
+import style from './App.module.scss'
 
 const App = () => {
   return (

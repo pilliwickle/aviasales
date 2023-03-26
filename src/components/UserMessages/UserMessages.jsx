@@ -2,13 +2,13 @@ import React from 'react'
 
 import spinner from '../../images/spinner.svg'
 
-import style from './user-messages.module.scss'
+import style from './UserMessages.module.scss'
 
-export const NetworkAlert = () => {
+export const ServerErrorAlert = () => {
   return (
     <div className={style['user-message']}>
       <h1>Что-то явно пошло не так...</h1>
-      <p>. Попробуйте снова через какое-то время!</p>
+      <p>Проблема не в вас, просто серверу немного грустно. Попробуйте снова через какое-то время!</p>
     </div>
   )
 }
@@ -17,7 +17,7 @@ export const SearchAlert = () => {
   return (
     <div className={style['user-message']}>
       <h1>Неверный запрос...</h1>
-      <p>Билетов не найдено. Попробуйте изменить его!</p>
+      <p>Рейсов, подходящих под заданные фильтры, не найдено</p>
     </div>
   )
 }

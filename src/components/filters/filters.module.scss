@@ -1,5 +1,8 @@
 @import '/src/constants.scss';
 
+
+
+
 .filters {
   background-color: #fff;
 
@@ -7,13 +10,14 @@
   min-width: $mobile-blocks-width;
   padding: 20px;
   margin: 0 auto;
-
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
   border-radius: 5px;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: inherit;
+  
 
   &__title {
     display: block;
@@ -41,11 +45,15 @@
     cursor: pointer;
   }
 
+
   &__checkbox {
+    
     width: 15px;
     height: 15px;
     margin-right: 5px;
     cursor: pointer;
+    
+    
   }
 }
 
@@ -56,9 +64,7 @@
     box-sizing: border-box;
     margin: 0;
     max-height: 252px;
-
     justify-content: start;
-
     font-size: 13px;
 
     &__title {
@@ -67,6 +73,7 @@
     }
 
     &__filter-item {
+      
       display: flex;
       justify-content: flex-start;
       align-items: center;

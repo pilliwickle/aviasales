@@ -15,8 +15,8 @@
   &__header {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding-left: 0;
+    align-items: center;
   }
 
   &__price {
@@ -34,13 +34,13 @@
 
   &__info-item {
     display: flex;
-    max-width: 113px;
-    min-width: 113px;
     justify-content: space-between;
   }
 
   &__info-item p {
     display: flex;
+    max-width: 113px;
+    min-width: 113px;
     flex-direction: column;
 
     & span:first-child {
@@ -72,6 +72,6 @@
       max-width: 160px;
       min-width: 160px;
       flex-direction: column;
-}
-}
+    }
+  }
 }

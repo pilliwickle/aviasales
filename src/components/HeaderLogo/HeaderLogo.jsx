@@ -2,13 +2,13 @@ import React from 'react'
 
 import logo from '../../images/Logo.svg'
 
-import style from './header-logo.module.scss'
+import style from './HeaderLogo.module.scss'
 
 const HeaderLogo = () => {
   return (
-    <div className={style['logo-block']}>
+    <header className={style['logo-block']}>
       <img src={logo} className={style['logo']} alt="Aviasales logo" />
-    </div>
+    </header>
   )
 }
 

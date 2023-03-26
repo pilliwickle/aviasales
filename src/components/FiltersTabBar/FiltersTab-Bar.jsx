@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { selectSort } from '../../store/sortSlice'
 import { sortItems } from '../../constants'
 
-import style from './filters-tab-bar.module.scss'
+import style from './FiltersTabBar.module.scss'
 
 const FiltersTabBar = () => {
   const dispatch = useDispatch()

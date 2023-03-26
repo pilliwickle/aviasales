@@ -3,7 +3,7 @@ import { format, addMinutes } from 'date-fns'
 
 import { stopsView, durationView } from '../../helpers/view-helpers'
 
-import style from './ticket-item.module.scss'
+import style from './TicketItem.module.scss'
 
 export const FlightView = ({ info }) => {
   const { origin, destination, date, duration, stops } = info

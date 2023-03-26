@@ -2,14 +2,14 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { v4 as createKey } from 'uuid'
 
-import TicketItem from '../ticket-item/ticket-item'
-import { NetworkAlert, SearchAlert, LoadingSpinner } from '../user-messages/user-messages'
+import TicketItem from '../TicketItem/TicketItem'
+import { ServerErrorAlert, SearchAlert, LoadingSpinner } from '../UserMessages/UserMessages'
 import { fetchSearchID } from '../../store/searchIDSlice'
 import { fetchTickets } from '../../store/ticketSlice'
 import { statuses } from '../../constants'
 import { formWithCurrentSort, formWithFilters } from '../../helpers/sort-list-funcs'
 
-import style from './ticket-list.module.scss'
+import style from './TicketList.module.scss'
 
 const TicketList = () => {
   const dispatch = useDispatch()
@@ -28,34 +28,30 @@ const TicketList = () => {
 
   useEffect(() => {
     const prepareData = async () => {
-      const searchRes = await dispatch(fetchSearchID())
-
-      if (searchRes.payload) {
-        dispatch(fetchTickets(searchRes.payload))
-      }
-
-      if (searchIDError) {
-        setError(searchIDError)
-      }
+      return dispatch(fetchSearchID())
     }
 
     prepareData()
+      .then((res) => {
+        dispatch(fetchTickets(res.payload))
+      })
+      .catch((e) => setError(e))
   }, [])
 
-  switch (status) {
-    case statuses.loading:
-      return <LoadingSpinner />
+  if (searchIDError) {
+    setError(searchIDError)
+  }
 
-    case statuses.rejected:
-      return <NetworkAlert />
+  if (status === statuses.loading) {
+    return <LoadingSpinner />
+  }
 
-    default:
-      break
+  if (status === statuses.rejected) {
+    return <ServerErrorAlert />
   }
 
   if (error) {
-    console.warn(error)
-    return <NetworkAlert />
+    return <ServerErrorAlert />
   }
 
   const tickets = formWithCurrentSort(currentSort, ticketData.slice())
@@ -74,10 +70,12 @@ const TicketList = () => {
       </li>
     ))
   }
+
   return (
     <ul className={style['ticket-list']}>
       {ticketsContent(tickets)}
       <button
+        type="button"
         className={style['button']}
         style={{ display: ticketsToRender.length ? 'block' : 'none' }}
         onClick={onMoreTicketsButton}
