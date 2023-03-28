@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { v4 as createKey } from 'uuid'
+import { v4 as uuidv4 } from 'uuid'
 
 import TicketItem from '../TicketItem/TicketItem'
 import { ServerErrorAlert, SearchAlert, LoadingSpinner } from '../UserMessages/UserMessages'
@@ -65,8 +65,8 @@ const TicketList = () => {
     }
 
     return ticketsToRender.map((item) => (
-      <li key={createKey()}>
-        <TicketItem {...item} key={createKey()} />
+      <li key={uuidv4()}>
+        <TicketItem price={item.price} carrier={item.carrier} segments={item.segments} />
       </li>
     ))
   }

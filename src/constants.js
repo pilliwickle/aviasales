@@ -25,25 +25,31 @@ export const sortItems = [
   },
 ]
 
-export const filterItems = [
-  {
-    name: 'allTrans',
-    label: 'Все',
-  },
-  {
-    name: 'noneTrans',
-    label: 'Без пересадок',
-  },
-  {
-    name: 'oneTrans',
-    label: '1 пересадка',
-  },
-  {
-    name: 'twoTrans',
-    label: '2 пересадки',
-  },
-  {
-    name: 'threeTrans',
-    label: '3 пересадки',
-  },
-]
+export const filterItems = {
+  //movienumber
+  all: 'Все',
+  without: 'Без пересадок',
+  one: '1 пересадка',
+  two: '2 пересадки',
+  three: '3 пересадки',
+}
+// {
+//   name: 'allTrans',
+//   label: 'Все',
+// },
+// {
+//   name: 'noneTrans',
+//   label: 'Без пересадок',
+// },
+// {
+//   name: 'oneTrans',
+//   label: '1 пересадка',
+// },
+// {
+//   name: 'twoTrans',
+//   label: '2 пересадки',
+// },
+// {
+//   name: 'threeTrans',
+//   label: '3 пересадки',
+// },

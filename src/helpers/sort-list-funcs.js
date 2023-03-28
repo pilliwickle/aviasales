@@ -18,18 +18,18 @@ export const formWithCurrentSort = (currentSort, tickets) => {
 
 export const formWithFilters = (filter, tickets, status) => {
   const filters = {
-    allTrans: filter.allTrans && 4,
-    noneTrans: filter.noneTrans && 0,
-    oneTrans: filter.oneTrans && 1,
-    twoTrans: filter.twoTrans && 2,
-    threeTrans: filter.threeTrans && 3,
+    all: filter.all && 4,
+    without: filter.without && 0,
+    one: filter.one && 1,
+    two: filter.two && 2,
+    three: filter.three && 3,
   }
 
   let ticketsToRender = []
 
   if (status === statuses.fulfilled) {
     tickets.map((item) => {
-      if (filter.allTrans) {
+      if (filter.all) {
         ticketsToRender.push(item)
         return
       }
@@ -38,14 +38,14 @@ export const formWithFilters = (filter, tickets, status) => {
       const stopsBack = item.segments[1].stops.length
 
       if (
-        (stopsTo === filters.noneTrans ||
-          stopsTo === filters.oneTrans ||
-          stopsTo === filters.twoTrans ||
-          stopsTo === filters.threeTrans) &&
-        (stopsBack === filters.noneTrans ||
-          stopsBack === filters.oneTrans ||
-          stopsBack === filters.twoTrans ||
-          stopsBack === filters.threeTrans)
+        (stopsTo === filters.without ||
+          stopsTo === filters.one ||
+          stopsTo === filters.two ||
+          stopsTo === filters.three) &&
+        (stopsBack === filters.without ||
+          stopsBack === filters.one ||
+          stopsBack === filters.two ||
+          stopsBack === filters.three)
       ) {
         ticketsToRender.push(item)
         return
