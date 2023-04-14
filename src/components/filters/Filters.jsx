@@ -9,8 +9,8 @@ import style from './filters.module.scss'
 const Filters = () => {
   const filterState = useSelector((state) => state.filter)
   const dispatch = useDispatch()
-  const moves = Object.keys(filterItems)
-  const filterList = moves.map((item) => {
+  const itemcheck = Object.keys(filterItems)
+  const filterList = itemcheck.map((item) => {
     return (
       <li key={item} className={style.FilterItem} onClick={() => dispatch(selectFilter(filterItems[item]))}>
         <input className={style['filters__checkbox']} type="checkbox" checked={filterState[item]} readOnly />
@@ -20,25 +20,6 @@ const Filters = () => {
       </li>
     )
   })
-  // const Filters = () => {
-  //   const filterState = useSelector((state) => state.filter)
-  //   const dispatch = useDispatch()
-
-  //   const filterList = filterItems.map(({ name, label }) => {
-  //     return (
-  //       <label key={name} htmlFor={name} className={style['filters__filter-item']}>
-  //         <input
-  //           name={name}
-  //           type="checkbox"
-  //           id={name}
-  //           className={style['filters__checkbox']}
-  //           checked={filterState[name]}
-  //           onChange={() => dispatch(selectFilter(name))}
-  //         />
-  //         {label}
-  //       </label>
-  //     )
-  //   })
 
   return (
     <div className={style['filters']}>
